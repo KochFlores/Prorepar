@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProreparApp.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Center" 
+                         HorizontalOptions="Center"  
+                         Orientation="Horizontal">
+                <ImageButton x:Name="Logo" 
+                             Clicked="Logo_Clicked"
+                             Resources="logo.png"
+                             HeightRequest="45"/>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="PROREPAR&#10;" 
+                                  FontFamily="Russo One" 
+                                  FontAttributes="Bold" 
+                                  FontSize="50" 
+                                  TextColor="#8F0808"/>
+                            <Span Text="Productos Reparados"
+                                  FontFamily="Russo One"
+                                  FontAttributes="Bold"
+                                  FontSize="45"
+                                  TextColor="Black"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <Frame BackgroundColor="White"
+                   CornerRadius="10">
+                <StackLayout BackgroundColor="WhiteSmoke"
+                             >
+                    <Frame BackgroundColor="#E54343"
+                           VerticalOptions="Center"
+                           Padding="5,5,5,5"
+                           CornerRadius="10">
+                        <Label Text="INICIAR SESION"
+                               TextColor="White"/>
+                    </Frame>
+                    <Frame BackgroundColor="White"
+                           BorderColor="LightGray"
+                           MinimumWidthRequest="2"
+                           CornerRadius="8"
+                           Padding="15,15,0,0">
+                        <Entry IsPassword="True" Text="Ingrese su E-mail" Placeholder="Email"/>
+                    </Frame>
+                    <Frame BackgroundColor="White"
+                           BorderColor="LightGray"
+                           MinimumWidthRequest="2"
+                           CornerRadius="8"
+                           Padding="15,15,0,0">
+                    <Entry IsPassword="True" Text="Ingrese su contraseña" Placeholder="Password"/>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
